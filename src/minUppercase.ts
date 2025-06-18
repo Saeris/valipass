@@ -1,4 +1,4 @@
-import { type BaseIssue, type BaseValidation, type ErrorMessage, _addIssue } from "valibot";
+import { type BaseIssue, type BaseValidation, type ErrorMessage, type OutputDataset, _addIssue } from "valibot";
 
 /**
  * Min uppercase issue interface.
@@ -94,7 +94,7 @@ export function minUppercase(
     expects: `>=${requirement}`,
     requirement,
     message,
-    "~run"(dataset, config) {
+    "~run"(dataset, config): OutputDataset<string, BaseIssue<unknown> | MinUppercaseIssue<string, number>> {
       if (
         dataset.typed &&
         typeof dataset.value === `string` &&

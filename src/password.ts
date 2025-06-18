@@ -1,8 +1,9 @@
+import type { SchemaWithPipe, StringSchema, MinLengthAction, MaxLengthAction } from "valibot";
 import { pipe, string, minLength, maxLength } from "valibot";
-import { minLowercase } from "./minLowercase .js";
-import { minUppercase } from "./minUppercase.js";
-import { minNumbers } from "./minNumbers.js";
-import { minSymbols } from "./minSymbols.js";
+import { minLowercase, type MinLowercaseAction } from "./minLowercase .js";
+import { minUppercase, type MinUppercaseAction } from "./minUppercase.js";
+import { minNumbers, type MinNumbersAction } from "./minNumbers.js";
+import { minSymbols, type MinSymbolsAction } from "./minSymbols.js";
 
 /**
  * Overrides for the default password requirements
@@ -37,7 +38,17 @@ export interface PasswordOptions {
  * - contain at least 1 symbol
  */
 // @__NO_SIDE_EFFECTS__
-export const password = ({ min, max, lowercase, uppercase, numbers, symbols }: PasswordOptions = {}) =>
+export const password = ({ min, max, lowercase, uppercase, numbers, symbols }: PasswordOptions = {}): SchemaWithPipe<
+  readonly [
+    StringSchema<undefined>,
+    MinLengthAction<string, number, undefined>,
+    MaxLengthAction<string, number, undefined>,
+    MinLowercaseAction<string, number, undefined>,
+    MinUppercaseAction<string, number, undefined>,
+    MinNumbersAction<string, number, undefined>,
+    MinSymbolsAction<string, number, undefined>
+  ]
+> =>
   pipe(
     string(),
     minLength(min ?? 8),

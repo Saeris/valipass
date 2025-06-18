@@ -155,7 +155,8 @@ import { password } from "valipass";
 const loginSchema = v.object({
   username: v.pipe(v.string(), v.email()),
   // by default, a password is expected to be between 8 and 250 characters
-  // here, we set that to between 16 and 32 characters, and add a space-separated "words" requirement
+  // here, we set that to between 16 and 32 characters, and add a
+  // space-separated "words" requirement
   password: v.pipe(password({ min: 16, max: 32 }), v.minWords(`en`, 5))
 });
 
