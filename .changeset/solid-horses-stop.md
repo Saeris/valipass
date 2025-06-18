@@ -1,5 +1,0 @@
----
-"valipass": major
----
-
-Initial Release

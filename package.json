@@ -1,7 +1,7 @@
 {
   "name": "valipass",
   "description": "Collection of password validation actions for Valibot schemas",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Drake Costa <drake@saeris.gg> (https://saeris.gg)",
   "keywords": [
