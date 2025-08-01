@@ -1274,12 +1274,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:24.0.8":
-  version: 24.0.8
-  resolution: "@types/node@npm:24.0.8"
+"@types/node@npm:24.1.0":
+  version: 24.1.0
+  resolution: "@types/node@npm:24.1.0"
   dependencies:
     undici-types: "npm:~7.8.0"
-  checksum: 10/99edcbdb1bd2c55d02d989deaccef9ff25c9094be7c7ee7c0b0ed722399bed2138e2fcee7c8fd76fe8da79e83735f3b129ee2fca7caa9bafb0f22b7418486730
+  checksum: 10/02c3d91e1407a93a2363f97a245475fa0f6209d3f3e6ba9fdaabe65389e3e078f648da81b8738125dec6b6bf98c50fb928f36f4e72b8b015817bc21479a868c2
   languageName: node
   linkType: hard
 
@@ -6927,7 +6927,7 @@ __metadata:
     "@changesets/changelog-github": "npm:^0.5.1"
     "@changesets/cli": "npm:^2.29.4"
     "@saeris/eslint-config": "npm:^3.1.1"
-    "@types/node": "npm:24.0.8"
+    "@types/node": "npm:24.1.0"
     "@vitest/coverage-v8": "npm:^3.2.4"
     eslint: "npm:^9.29.0"
     prettier: "npm:^3.5.3"
